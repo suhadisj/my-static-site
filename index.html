@@ -5,16 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Web Site</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #f4f4f9; }
-        .card { text-align: center; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f4f4f9;
+            padding: 20px;
+        }
+
+        .layout {
+            width: 100%;
+            max-width: 1100px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 250px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .left-text,
+        .right-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #24292e;
+        }
+
+        .card {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
         h1 { color: #24292e; }
         p { color: #586069; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>🚀 Hello World!</h1>
-        <p>This static website was created and hosted entirely on GitHub web.</p>
+    <div class="layout">
+        <div class="column left-text">This is 1st Column</div>
+
+        <div class="column">
+            <div class="card">
+                <h1>🚀 Hello World!</h1>
+                <p>This static website was created and hosted entirely on GitHub web.</p>
+            </div>
+        </div>
+
+        <div class="column right-text">The End</div>
     </div>
 </body>
 </html>
