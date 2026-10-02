@@ -18,6 +18,30 @@
             padding: 20px;
         }
 
+        body {
+            display: block;
+            padding: 30px 20px;
+        }
+
+        .top-banner {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto 25px;
+            text-align: center;
+            padding: 20px 15px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .top-banner h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            color: #d62828;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
+
         .layout {
             width: 100%;
             max-width: 1100px;
@@ -25,6 +49,7 @@
             grid-template-columns: 1fr 1.5fr 1fr;
             gap: 20px;
             align-items: center;
+            margin: 0 auto;
         }
 
         .column {
@@ -57,6 +82,10 @@
     </style>
 </head>
 <body>
+    <div class="top-banner">
+        <h2>The Web Is Live ....</h2>
+    </div>
+
     <div class="layout">
         <div class="column left-text">This is 1st Column</div>
 
